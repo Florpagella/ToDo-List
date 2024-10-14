@@ -23,12 +23,30 @@ const addNewTask = event => {
     task.classList.add('task', 'newTask');
     task.addEventListener('click', changeTaskState)
     task.textContent = value;
+
+    // delete task
+
+    const deleteTaskBtn = document.createElement('button');
+    deleteTaskBtn.classList.add('deleteBtn');
+    deleteTaskBtn.textContent = 'Borrar';
+    deleteTaskBtn.addEventListener('click', deleteTask);
+    task.appendChild(deleteTaskBtn);
+
+
     taskContainer.prepend(task);
     event.target.reset();
 };
 
 const changeTaskState = event => {
     event.target.classList.toggle('done');
+};
+
+// delete task
+
+const deleteTask = event => {
+    event.stopPropagation();
+    const task = event.target.parentElement;
+    taskContainer.removeChild(task);
 };
 
 const order = () => {
