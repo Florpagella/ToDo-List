@@ -1,0 +1,122 @@
+@import url('https://fonts.googleapis.com/css2?family=Afacad+Flux:wght@100..1000&display=swap');
+
+/* font-family: "Afacad Flux", sans-serif; */
+
+:root {
+    --primary: #FFEDE1;
+    --secondary: #f9dbbd;
+    --background: #303036;
+    --text: #333;
+    --order: #B23A48 ;
+    --add: #f26a2e ;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Afacad Flux", sans-serif;
+}   
+
+body {
+    margin: 0;
+    height: 100vh;
+    background-color: var(--background);
+}
+
+.container {
+    text-transform: capitalize;
+    border-radius: 10px;
+    margin: 25px auto;
+    padding: 25px;
+    width: 100%;
+    max-width: 350px;
+    background-color: #FFEDE1;
+}
+
+.date {
+display: flex;
+justify-content: space-between;
+align-items: center;
+color: var(--background);
+}
+
+.dateleft{
+    display: flex;
+    align-items: center;
+}
+
+#dateNumber {
+    font-size: 3rem;
+    font-weight: 500;
+}
+
+#dateText {
+    letter-spacing: 0.3rem;
+    text-transform: uppercase;
+}
+
+#dateMonth, #dateText  {
+    font-weight: 750;
+}
+
+#dateMonth, #dateYear {
+    margin-left: 7px;
+    font-size: 1.1rem;
+}
+
+form {
+    margin: 20px 0;
+    display: grid;
+    grid-auto-flow: column;
+    grid-template-columns: auto 35px auto;
+    grid-column-gap: 15px;
+}
+
+input {
+    border: none;
+    padding-left: 10px;
+    background-color: #3030362a;
+    color: var(--background);
+    border-radius: 5px;
+    padding: 5px;
+}
+
+input:focus {
+    outline: none;
+}
+
+.addTaskBtn, .orderBtn {
+    border: none;
+    cursor: pointer;
+    background-color: #3030362a;
+
+}
+
+.addTaskBtn {
+    height: 35px;
+    border-radius: 50%;
+    font-size: 18px;
+    background-color: var(--add);    
+}
+
+.orderBtn {
+    background-color: var(--order);
+    color: var(--primary);
+    letter-spacing: 0.1rem;
+    border-radius: 5px;
+    }
+
+    .task {
+        background-color: var(--secondary);
+        padding: 15px;
+        margin-top: 15px;
+        color: var(--text);
+        cursor: pointer;
+    }
+
+    .done {
+    background-color: #3030362a;
+    text-decoration: line-through;
+    color: var(--text);
+    }
