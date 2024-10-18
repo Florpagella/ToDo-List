@@ -124,6 +124,10 @@ input:focus {
     color: var(--text);
     }
 
+    .done:active {
+        background-color:none;
+    }
+
     .deleteBtn {
         border: none;
         cursor: pointer;
